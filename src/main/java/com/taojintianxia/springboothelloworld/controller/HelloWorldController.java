@@ -1,13 +1,12 @@
 package com.taojintianxia.springboothelloworld.controller;
 
-import org.springframework.core.io.ClassPathResource;
-import org.springframework.core.io.Resource;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import java.io.ByteArrayOutputStream;
 import java.io.IOException;
-import java.io.InputStream;
+import java.util.Enumeration;
+import java.util.jar.JarEntry;
+import java.util.jar.JarFile;
 
 /**
  * @author Nianjun Sun
@@ -26,15 +25,16 @@ public class HelloWorldController {
     @GetMapping("test")
     public void test() throws IOException {
         System.out.println("start to print file inside jar");
-        Resource bashFileResource = new ClassPathResource("templates/run.sh");
-        InputStream inputStream = bashFileResource.getInputStream();
-        ByteArrayOutputStream byteArrayOutputStream = new ByteArrayOutputStream();
-        byte[] cache = new byte[512];
-        while (inputStream.read(cache) > -1) {
-            byteArrayOutputStream.write(cache);
-        }
+//        Resource bashFileResource = new ClassPathResource("templates/");
+//        InputStream inputStream = bashFileResource.getInputStream();
+//        File fromFile = bashFileResource.getFile();
+//        File toFile = new File("/Users/sunnianjun/Incubator/duowen-workspace/templates/");
+//        com.google.common.io.Files.copy(fromFile,toFile);
 
-        System.out.println(byteArrayOutputStream.toString());
+        JarFile jarFile = new JarFile("/Users/sunnianjun/Incubator/Github/springboot-hello-world/target/springboot-hello-world-0.0.1-SNAPSHOT.jar");
+        for (Enumeration<JarEntry> entries = jarFile.entries(); entries.hasMoreElements();){
+
+        }
     }
 }
 
