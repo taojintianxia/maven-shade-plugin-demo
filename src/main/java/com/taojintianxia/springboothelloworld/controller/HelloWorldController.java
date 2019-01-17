@@ -1,5 +1,6 @@
 package com.taojintianxia.springboothelloworld.controller;
 
+import com.google.common.base.Strings;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -50,7 +51,7 @@ public class HelloWorldController {
             JarEntry entry = entries.nextElement();
             if (entry != null && rootResource.startsWith(entry.getName())) {
                 if (entry.isDirectory()) {
-
+                    createSourceDirectory(entry, rootResource, destination);
                 } else {
 
                 }
@@ -59,7 +60,19 @@ public class HelloWorldController {
     }
 
     private static void createSourceDirectory(JarEntry jarEntry, String rootResource, File destination) {
+        String entryName = jarEntry.getName();
+        String folderName = entryName.substring(entryName.indexOf(rootResource) + rootResource.length());
+        if (Strings.isNullOrEmpty(folderName) || folderName.equals("/")) {
+            return;
+        }
+        File resourceFolder = new File(destination.getAbsolutePath() + folderName);
+        resourceFolder.mkdirs();
+    }
 
+    public static void main(String... args) {
+        String fullName = "BOOT-INF/classes/templates/";
+        String name = "BOOT-INF/classes/templates/".substring(fullName.indexOf("BOOT-INF/classes/") + fullName.length());
+        System.out.println(name);
     }
 }
 
