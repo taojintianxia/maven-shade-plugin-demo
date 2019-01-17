@@ -47,8 +47,19 @@ public class HelloWorldController {
 
         Enumeration<JarEntry> entries = jarFile.entries();
         while (entries != null && entries.hasMoreElements()) {
+            JarEntry entry = entries.nextElement();
+            if (entry != null && rootResource.startsWith(entry.getName())) {
+                if (entry.isDirectory()) {
 
+                } else {
+
+                }
+            }
         }
+    }
+
+    private static void createSourceDirectory(JarEntry jarEntry, String rootResource, File destination) {
+
     }
 }
 
