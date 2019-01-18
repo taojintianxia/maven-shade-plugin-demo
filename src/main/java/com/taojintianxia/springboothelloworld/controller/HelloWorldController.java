@@ -36,7 +36,7 @@ public class HelloWorldController {
 //        com.google.common.io.Files.copy(fromFile,toFile);
 
         JarFile jarFile = new JarFile("/Users/sunnianjun/Incubator/Github/springboot-hello-world/target/springboot-hello-world-0.0.1-SNAPSHOT.jar");
-        copyResourceToDirectory(jarFile, "",);
+        copyResourceToDirectory(jarFile, "BOOT-INF/classes/templates/",new File("/Users/sunnianjun/Incubator/duowen-workspace"));
     }
 
     private static void copyResourceToDirectory(JarFile jarFile, String rootResource, File destination) {
@@ -86,13 +86,6 @@ public class HelloWorldController {
                 fileOutputStream.write(buffer, 0, cache);
             }
         }
-
-    }
-
-    public static void main(String... args) {
-        String fullName = "BOOT-INF/classes/templates/";
-        String name = "BOOT-INF/classes/templates/".substring(fullName.indexOf("BOOT-INF/classes/") + fullName.length());
-        System.out.println(name);
     }
 }
 
