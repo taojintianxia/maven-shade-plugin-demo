@@ -3,8 +3,6 @@ package com.taojintianxia.springboothelloworld.controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import java.io.IOException;
-
 /**
  * @author Nianjun Sun
  * @date 2018/12/12 15:40
@@ -17,10 +15,6 @@ public class HelloWorldController {
     public String helloWorld() {
         System.out.println("Hello World");
         return "Hello, World !";
-    }
-
-    @GetMapping("test")
-    public void test() throws IOException {
     }
 }
 
