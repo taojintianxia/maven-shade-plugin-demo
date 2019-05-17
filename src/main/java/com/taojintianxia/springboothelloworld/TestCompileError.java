@@ -7,6 +7,6 @@ package com.taojintianxia.springboothelloworld;
 public class TestCompileError {
 
     public static void main(String...args){
-        System.out.println('');
+        System.out.println(');
     }
 }
