@@ -1,4 +1,4 @@
-package com.github.taojintianxia.maven.shadeplugin.moduleroot.maven.shadeplugin.moduleb;
+package com.github.taojintianxia.maven.shadeplugin.moduleashade.maven.shadeplugin.moduleroot.maven.shadeplugin.moduleb;
 
 import com.google.common.base.Objects;
 import com.google.common.base.Strings;
