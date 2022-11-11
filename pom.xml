@@ -10,6 +10,7 @@
     <modules>
         <module>module-a</module>
         <module>module-b</module>
+        <module>module-root</module>
     </modules>
     <name>maven-shade-demo</name>
     <description>Maven Shade Demo</description>
