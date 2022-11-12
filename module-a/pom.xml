@@ -19,9 +19,9 @@
 
     <dependencies>
         <dependency>
-            <groupId>com.google.guava</groupId>
-            <artifactId>guava</artifactId>
-            <version>31.1-jre</version>
+            <groupId>com.github.taojintianxia</groupId>
+            <artifactId>guava-shade</artifactId>
+            <version>${project.version}</version>
         </dependency>
     </dependencies>
 </project>
