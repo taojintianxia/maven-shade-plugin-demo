@@ -2,22 +2,22 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
-    
     <groupId>com.github.taojintianxia</groupId>
     <artifactId>maven-plugin-shade</artifactId>
     <packaging>pom</packaging>
     <version>1.0.0-SNAPSHOT</version>
+    <name>maven-shade-plugin-demo</name>
+    <description>Maven Shade Plugin Demo</description>
+    
     <modules>
         <module>module-a</module>
         <module>module-b</module>
         <module>module-root</module>
         <module>guava-shade</module>
     </modules>
-    <name>maven-shade-demo</name>
-    <description>Maven Shade Demo</description>
 
     <properties>
-        <java.version>1.8</java.version>
-    </properties>
-    
+        <maven.compiler.source>8</maven.compiler.source>
+        <maven.compiler.target>8</maven.compiler.target>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>    </properties>
 </project>
