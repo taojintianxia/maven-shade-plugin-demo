@@ -1,4 +1,4 @@
-package com.github.taojintianxia.maven.shadeplugin.moduleashade.maven.shadeplugin.moduleroot.maven.shadeplugin.modulea;
+package com.github.taojintianxia.maven.shadeplugin.modulea;
 
 
 import com.sphereex.shade.guava.common.base.Strings;
