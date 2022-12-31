@@ -11,15 +11,10 @@
     <artifactId>module-a</artifactId>
 
     <dependencies>
-<!--        <dependency>-->
-<!--            <groupId>com.github.taojintianxia</groupId>-->
-<!--            <artifactId>guava-shade</artifactId>-->
-<!--            <version>${project.version}</version>-->
-<!--        </dependency>-->
         <dependency>
-            <groupId>com.sphereex</groupId>
-            <artifactId>shade-guava</artifactId>
-            <version>1.0.0-SNAPSHOT</version>
+            <groupId>com.github.taojintianxia</groupId>
+            <artifactId>guava-shade</artifactId>
+            <version>${project.version}</version>
         </dependency>
     </dependencies>
 </project>

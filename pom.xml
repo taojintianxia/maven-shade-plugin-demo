@@ -14,6 +14,7 @@
         <module>module-b</module>
         <module>module-root</module>
         <module>guava-shade</module>
+        <module>subshade</module>
     </modules>
 
     <properties>
